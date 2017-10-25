@@ -16,13 +16,13 @@ To use the Jortt API client, the following things are required:
 + PHP cURL extension
 
 
-easiest way to install the Mollie API client is to require it with Composer.
+Easy way to install the Jortt BV API client is to require it with Composer.
 
-$ composer require mollie/mollie-api-php:1.9.*
+$ composer require fabricedelahaij/jorttbv-php-api:1.0.*
 
 {
     "require": {
-        "mollie/mollie-api-php": "1.0.*"
+        "fabricedelahaij/jorttbv-php-api": "1.0.*"
     }
 }
 
