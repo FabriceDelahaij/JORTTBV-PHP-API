@@ -15,6 +15,19 @@ To use the Jortt API client, the following things are required:
 + PHP 5.2 or 5.5
 + PHP cURL extension
 
+
+## 
+Easy way to install the Jortt BV API client is to require it with [Composer](http://getcomposer.org/doc/00-intro.md).
+
+    $ composer require fabricedelahaij/jorttbv-php-api:1.0.*
+
+    {
+        "require": {
+            "fabricedelahaij/jorttbv-php-api": "1.9.*"
+        }
+    }
+
+
 ## Getting started ##
 
 ```php
