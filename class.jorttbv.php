@@ -47,8 +47,6 @@
 			}
 			// Close connection
 			curl_close($request);
-			// Decode JSON response.
-			$response = json_decode($result, true);
 			//
 			print $result;
 		}
