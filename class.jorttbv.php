@@ -1,17 +1,26 @@
 <?php
-	class JorttBV_Client	{
+	/*
+	*
+	*	@File		jorttbv.class.php
+	*	@Author		Extreemhost <admin@extreemhost.nl> (2017)
+	*	@License	Berkeley Software Distribution License (BSD-License 2) http://www.opensource.org/licenses/bsd-license.php
+	*
+	*/
+
+	class JorttBV_Client
+	{
 		protected $appname;
 		protected $apptoken;
 		protected $appurl = 'https://app.jortt.nl/api/';
 
-		public function __construct($appname, $apptoken){
+		public function __construct($appname, $apptoken) {
 			$this->appname = $appname;
 			$this->apptoken = $apptoken;
 		}
 
 		public function request($string, $select) {
 			$request = curl_init();
-			$headers =  array(
+			$headers = array(
 				'Content-Type: application/json',
 				'Accept: application/json',
 				'Authorization: Basic '.base64_encode($this->appname.':'.$this->apptoken)
