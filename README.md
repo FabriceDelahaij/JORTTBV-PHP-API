@@ -59,8 +59,7 @@ $api->request($data, 'customers');
 If you wish to learn more about our API, please visit the [API Documentation](https://app.jortt.nl/api-documentatie).
 
 ## License ##
-
 [BSD (Berkeley Software Distribution) License](https://opensource.org/licenses/bsd-license.php). Copyright (c) 2017, Extreemhost.
 
 ## Support ##
- Contact: [www.extreemhost.nl](https://extreemhost.nl) ? info@extreemhost ? +31 316-23 40 40
+Contact: [www.extreemhost.nl](https://extreemhost.nl) — info@extreemhost — +31 316-23 40 40
