@@ -9,9 +9,9 @@
 
 	class JorttBV_Client
 	{
-		protected $appname;
-		protected $apptoken;
-		protected $appurl = 'https://app.jortt.nl/api/';
+		protected static $appname;
+		protected static $apptoken;
+		protected static $appurl = 'https://app.jortt.nl/api/';
 
 		public function __construct($appname, $apptoken) {
 			$this->appname = $appname;
@@ -23,12 +23,12 @@
 			$headers = array(
 				'Content-Type: application/json',
 				'Accept: application/json',
-				'Authorization: Basic '.base64_encode($this->appname.':'.$this->apptoken)
+				'Authorization: Basic '.base64_encode(self::$appname.':'.self::$apptoken)
 			);
 			$config = array(
-				'APPNAME' => $this->appname,
-				'APITOKEN' => $this->apptoken,
-				'APIURL' => $this->appurl
+				'APPNAME' => self::$appname,
+				'APITOKEN' => self::$apptoken,
+				'APIURL' => self::$appurl
 			);
 			$command = json_encode($string);
 			curl_setopt($request, CURLOPT_URL, $config['APIURL'].$select);
