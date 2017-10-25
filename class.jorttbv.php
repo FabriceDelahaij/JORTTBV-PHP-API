@@ -18,7 +18,7 @@
 			$this->apptoken = $apptoken;
 		}
 
-		public function request($string, $select) {
+		public static function request($string, $select) {
 			$request = curl_init();
 			$headers = array(
 				'Content-Type: application/json',
