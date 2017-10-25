@@ -1,7 +1,7 @@
 {
-    "name": "JorttBV/PHP-API",
+    "name": "fabricedelahaij/JORTTBV-PHP-API",
     "description": "Jortt BV API client library for PHP",
-    "homepage": "https://github.com/Extreemhost/JORTTBV-PHP-API",
+    "homepage": "https://github.com/fabricedelahaij/JORTTBV-PHP-API",
     "license": "BSD-2-Clause",
     "authors": [
         {
