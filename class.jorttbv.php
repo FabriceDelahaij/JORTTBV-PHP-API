@@ -1,6 +1,8 @@
 <?php
 	class JorttBV_Client	{
-		protected $APIURL = 'https://app.jortt.nl/api/';
+		protected $appname;
+		protected $apptoken;
+		protected $appurl = 'https://app.jortt.nl/api/';
 
 		public function __construct($appname, $apptoken){
 			$this->appname = $appname;
@@ -17,7 +19,7 @@
 			$config = array(
 				'APPNAME' => $this->appname,
 				'APITOKEN' => $this->apptoken,
-				'APIURL' => $this->APIURL
+				'APIURL' => $this->appurl
 			);
 			$command = json_encode($string);
 			curl_setopt($request, CURLOPT_URL, $config['APIURL'].$select);
@@ -32,14 +34,13 @@
 			curl_setopt($request, CURLOPT_USERPWD, base64_encode($config['APPNAME'].':'.$config['APITOKEN']));
 			$result = curl_exec($request);
 			if ($result == FALSE) {
-				print('<p>Curl failed: '.curl_error($request).'</p>');
+				throw new Exception('<p>Curl failed: '.curl_error($request).'</p>');
 			}
 			// Close connection
 			curl_close($request);
 			// Decode JSON response.
 			$response = json_decode($result, true);
 			//
-			//return $response;
 			print $result;
 		}
 	}
