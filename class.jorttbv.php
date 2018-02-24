@@ -14,8 +14,8 @@
 		protected static $appurl = 'https://app.jortt.nl/api/';
 
 		public function __construct($appname, $apptoken) {
-			$this->appname = $appname;
-			$this->apptoken = $apptoken;
+			self::$appname = $appname;
+			self::$apptoken = $apptoken;
 		}
 
 		public static function request($string, $select) {
